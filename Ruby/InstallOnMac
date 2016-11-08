@@ -1,0 +1,27 @@
+[homebrew更新]：
+:brew update
+
+[若因为墙的问题更新不了, 切换brew update走代理]
+:export ALL_PROXY=socks5://127.0.0.1:1080
+
+[若brew更新失败，即git merge失败，运行：]
+:cd /usr/local
+:git reset --hard origin/master
+:brew update
+
+[Homebrew安装rbenv][https://github.com/rbenv/rbenv#choosing-the-ruby-version]
+:brew install rbenv
+
+[rbenv安装ruby]
+# list all available versions:
+:rbenv install -l
+
+# install a Ruby version:
+:rbenv install 2.3.1
+
+[
+rbenv global version  #设置全局使用的ruby版本
+rbenv shell version ＃设置在当前shell中使用的ruby版本，生成了一个RBENV_VERSION的变量
+rbenv local version  ＃设置在当前目录中的ruby版本，会在当前目录下生成.rbenv-version文件。
+]
+rbenv global 2.3.1
